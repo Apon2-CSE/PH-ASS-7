@@ -1,16 +1,63 @@
-# React + Vite
+1.  What is JSX, and why is it used?
+    => **JSX (JavaScript XML)**
+    JSX is a syntax extension for JavaScript used in React. It allows developers to write HTML-like code inside JavaScript ,which make it easier to create visualize UI components.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    **why used**
+    Makes code more readable and expressive.
+    Allows embedding JavaScript logic directly inside UI markup.
+    Transpiles to regular JavaScript which React can understand.
 
-Currently, two official plugins are available:
+2.  What is the difference between State and Props?
+    =>
+    **State**
+    State represent data managed within a component.
+    Used for data changes over time.
+    Owned and mananged by the component itself.
+    **Props**
+    Props are inputs passed from a parent component to a child.
+    Used to pass data and functions between components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3.  What is the useState hook, and how does it work?
+    =>The useState hook is React hook that allows functional components to manage state.
+    **How it works**
+    The curent state value.
+    A function to update that state
+    **Example**
 
-## React Compiler
+        import { useState } from "react";
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+        function Counter() {
+        const [count, setCount] = useState(0);
 
-## Expanding the ESLint configuration
+        return (
+        <div>
+        <p>Count: {count}</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    <button onClick={() => setCount(count + 1)}>Increase</button>
+       </div>
+       );
+    }
+
+4.  How can you share state between components in React?
+    =>
+    **Lift State Up**
+    Move the shared state to the nearest common parent and pass it down via props.
+    **Ract Context API**
+    Provides a way to share global state without prop drilling.
+    **State Management Libraries**
+    For complex apps , libraries like Redux , Zustand are often used
+
+5.  How is event handling done in React?
+    =>
+    Event handling in React is similar to DOM events but follows camelCase naming.
+    Instead of strings ,you pass a function as the event handler.
+    Funtions are usually written inline or defined separately.
+    **Example**
+    function Button() {
+    function handleClick() {
+    alert("Button clicked!");
+    }
+
+    return <button onClick={handleClick}>Click Me</button>;
+
+    }
