@@ -1,7 +1,7 @@
 import React from "react";
 
 const Carts = ({ manageData }) => {
-  //   console.log(manageData);
+  console.log(manageData);
   return (
     <div className="">
       <div className="rounded-xl bg-white p-5 shadow cursor-pointer ">

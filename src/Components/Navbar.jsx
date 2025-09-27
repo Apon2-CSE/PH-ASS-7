@@ -1,43 +1,90 @@
 import React from "react";
-import Container from "./Container";
-import { MdOutlineMenu } from "react-icons/md";
 
 const Navbar = () => {
   return (
     <div>
-      <div className=" shadow-md border-b-[0.5px] border-gray-100">
-        <Container>
-          <nav className="px-8 py-4 flex justify-between items-center">
-            <h1 className="md:text-xl text-sm font-bold">CS — Ticket System</h1>
-            <div className="md:flex hidden items-center gap-6">
-              <a href="#" className="text-gray-600">
-                Home
-              </a>
-              <a href="#" className="text-gray-600">
-                FAQ
-              </a>
-              <a href="#" className="text-gray-600">
-                Changelog
-              </a>
+      <div className="navbar bg-base-100 shadow-sm  ">
+        <div className=" container  mx-auto   ">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost lg:hidden"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {" "}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />{" "}
+                </svg>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a>Home</a>
+                </li>
+                <li>
+                  <a>FAQ</a>
+                </li>
+                <li>
+                  <a>Changelog</a>
+                </li>
+                <li>
+                  <a>Blog</a>
+                </li>
+                <li>
+                  <a>Download</a>
+                </li>
+                <li>
+                  <a>Contact</a>
+                </li>
+              </ul>
+            </div>
+            <a className=" md:text-[26px] text-[18px] font-bold  md:mb-3">
+              CS — Ticket System
+            </a>
+          </div>
 
-              <a href="#" className="text-gray-600">
-                Blog
-              </a>
-              <a href="#" className="text-gray-600">
-                Download
-              </a>
-              <a href="#" className="text-gray-600">
-                Contact
-              </a>
-              <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg hover:cursor-pointer">
-                + New Ticket
-              </button>
+          <div className="navbar-end">
+            <div className="navbar-center hidden lg:flex">
+              <ul className="menu menu-horizontal px-1 font-bold text-[15px]">
+                <li>
+                  <a>Home</a>
+                </li>
+                <li>
+                  <a>FAQ</a>
+                </li>
+                <li>
+                  <a>Changelog</a>
+                </li>
+                <li>
+                  <a>Blog</a>
+                </li>
+                <li>
+                  <a>Download</a>
+                </li>
+                <li>
+                  <a>Contact</a>
+                </li>
+              </ul>
             </div>
-            <div className="block md:hidden">
-              <MdOutlineMenu />
-            </div>
-          </nav>
-        </Container>
+            <a className="btn text-[18px] text-white  bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]  rounded-md">
+              + New Ticket
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
