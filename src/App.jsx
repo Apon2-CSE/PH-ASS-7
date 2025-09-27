@@ -7,7 +7,7 @@ import DataManagement from "./Components/AlldataCollection";
 import { ToastContainer } from "react-toastify";
 
 const fetchData = async () => {
-  const result = await fetch("./data.json");
+  const result = await fetch("/data.json");
   return result.json();
 };
 
