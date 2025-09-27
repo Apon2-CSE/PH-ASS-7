@@ -1,6 +1,6 @@
 import React from "react";
-import BGImage from "../../assets/vector1.png";
-import BGImage2 from "../../assets/vector2.png";
+import BGImage from "../../assets/bg-1.png";
+import BGImage2 from "../../assets/bg-2.png";
 
 const HeaderSection = ({ inProgress, resolved }) => {
   return (

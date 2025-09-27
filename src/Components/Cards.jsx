@@ -29,9 +29,9 @@ const Cards = ({ manageData }) => {
             <p>#{manageData.id}</p>
             <span
               className={`ml-5 ${
-                manageData.priority == "High Priority"
+                manageData.priority == "HIGH PRIORITY"
                   ? "text-red-600"
-                  : manageData.priority == "Medium Priority"
+                  : manageData.priority == "MEDIUM PRIORITY"
                   ? "text-yellow-500  "
                   : "text-green-600 "
               }`}

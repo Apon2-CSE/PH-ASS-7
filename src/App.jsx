@@ -20,7 +20,11 @@ function App() {
       <div>
         <Container></Container>
         <Navbar></Navbar>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense
+          fallback={
+            <span className="loading loading-spinner text-success w-20 h-20"></span>
+          }
+        >
           <DataManagement fetchPromise={fetchPromise}></DataManagement>
         </Suspense>
         <Footer></Footer>

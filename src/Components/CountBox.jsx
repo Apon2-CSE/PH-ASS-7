@@ -14,8 +14,8 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
               backgroundImage: `linear-gradient(to right, #632EE3, #9F62F2) `,
             }}
           >
-            <p className="text-2xl">In-Progress</p>
-            <p className="font text-7xl">{inProgressCount.length}</p>
+            <h2>In-Progress</h2>
+            <span>{inProgressCount}</span>
             <img src={BGImage} alt="" className=" absolute top-0 left-0" />
             <img
               src={BGImage2}
@@ -29,8 +29,9 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
               backgroundImage: `linear-gradient(to right, #54CF68, #00827A)`,
             }}
           >
-            <p className="text-2xl">Resolved</p>
-            <p className="font text-7xl">{resolvedCount.length}</p>
+            {" "}
+            <h2>Resolved</h2>
+            <span>{resolvedCount}</span>
             <img src={BGImage} alt="" className=" absolute top-0 left-0" />
             <img
               src={BGImage2}
@@ -38,6 +39,7 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
               className=" rotate-180 absolute  scale-y-[-1] top-0 right-0"
             />
           </div>
+          ;
         </div>
       </Container>
     </div>
@@ -47,14 +49,4 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
 export default CountBox;
 
 {
-  /* <div className="grid md:grid-cols-2 gap-5 p-10 text-center">
-  <div className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] h-[200px] p-7 text-white rounded-2xl font-bold text-2xl flex flex-col justify-center items-center">
-    <h2>In-Progress</h2>
-    <span>{inProgressCount}</span>
-  </div>
-  <div className="bg-gradient-to-r from-[#54CF68] to-[#00827A] h-[200px] p-7 text-white rounded-2xl font-bold text-2xl flex flex-col justify-center items-center">
-    <h2>Resolved</h2>
-    <span>{resolvedCount}</span>
-  </div>
-</div>; */
 }

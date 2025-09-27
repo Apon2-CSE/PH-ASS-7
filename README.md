@@ -61,3 +61,6 @@
     return <button onClick={handleClick}>Click Me</button>;
 
     }
+
+<p className="text-2xl">Resolved</p>
+            <p className="font text-7xl">{resolvedCount.length}</p>
