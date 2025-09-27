@@ -24,7 +24,9 @@ function App() {
 
         <Suspense
           fallback={
-            <span className="loading loading-spinner text-success w-20 h-20"></span>
+            <div className="flex items-center justify-center h-screen">
+              <span className="loading loading-dots loading-full "></span>
+            </div>
           }
         >
           <DataManagement fetchPromise={fetchPromise}></DataManagement>
