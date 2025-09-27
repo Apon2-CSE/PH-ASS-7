@@ -1,10 +1,10 @@
 import React from "react";
 
-const Cards = ({ manageData }) => {
+const Carts = ({ manageData }) => {
   //   console.log(manageData);
   return (
-    <div>
-      <div className="rounded-xl bg-white p-5 shadow cursor-pointer">
+    <div className="">
+      <div className="rounded-xl bg-white p-5 shadow cursor-pointer ">
         <div className="flex justify-between">
           <h1 className="font-bold text-1xl">{manageData.title}</h1>
           <button
@@ -52,4 +52,4 @@ const Cards = ({ manageData }) => {
   );
 };
 
-export default Cards;
+export default Carts;

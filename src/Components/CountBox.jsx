@@ -14,13 +14,17 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
               backgroundImage: `linear-gradient(to right, #632EE3, #9F62F2) `,
             }}
           >
-            <h2>In-Progress</h2>
-            <span>{inProgressCount}</span>
-            <img src={BGImage} alt="" className=" absolute top-0 left-0" />
+            <h2 className="text-[24px]">In-Progress</h2>
+            <span className="text-[60px] font-semibold">{inProgressCount}</span>
+            <img
+              src={BGImage}
+              alt=""
+              className=" absolute top-0 left-0  h-full object-cover"
+            />
             <img
               src={BGImage2}
               alt=""
-              className="rotate-180 absolute  scale-y-[-1]  top-0 right-0"
+              className="rotate-180 absolute  scale-y-[-1]  top-0 right-0  h-full object-cover"
             />
           </div>
           <div
@@ -30,13 +34,17 @@ const CountBox = ({ inProgressCount, resolvedCount }) => {
             }}
           >
             {" "}
-            <h2>Resolved</h2>
-            <span>{resolvedCount}</span>
-            <img src={BGImage} alt="" className=" absolute top-0 left-0" />
+            <h2 className="text-[24px]">Resolved</h2>
+            <span className="text-[60px] font-semibold">{resolvedCount}</span>
+            <img
+              src={BGImage}
+              alt=""
+              className=" absolute top-0 left-0  h-full object-cover"
+            />
             <img
               src={BGImage2}
               alt=""
-              className=" rotate-180 absolute  scale-y-[-1] top-0 right-0"
+              className=" rotate-180 absolute  scale-y-[-1] top-0 right-0  h-full object-cover"
             />
           </div>
           ;

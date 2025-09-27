@@ -1,10 +1,10 @@
 import React, { use, useState } from "react";
 import CountBox from "./CountBox";
-import Cards from "./Cards";
+import Cards from "./Carts";
 import Container from "./Container";
 import { toast } from "react-toastify";
 
-const DataManagement = ({ fetchPromise }) => {
+const AlldataCollection = ({ fetchPromise }) => {
   const initialData = use(fetchPromise);
 
   const [tickets, setTickets] = useState(initialData);
@@ -15,17 +15,17 @@ const DataManagement = ({ fetchPromise }) => {
   const handleAddToInProgress = (ticket) => {
     setInProgress([...inProgress, ticket]);
 
-    // Customer Tickets  remove
+    // Customer Tickets are remove
     setTickets(tickets.filter((t) => t.id !== ticket.id));
 
     toast(`${ticket.title} added to In-Progress`);
   };
 
-  //  Complete to Resolved
+  //  Complete all Resolved
   const handleComplete = (ticket) => {
     setResolved([...resolved, ticket]);
 
-    // In Progress - remove
+    // In Progress -- remove
     setInProgress(inProgress.filter((t) => t.id !== ticket.id));
 
     toast(`${ticket.title} marked as Resolved`);
@@ -33,7 +33,7 @@ const DataManagement = ({ fetchPromise }) => {
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen">
-      {/* Banner counts */}
+      {/* Banner--counts */}
       <CountBox
         inProgressCount={inProgress.length}
         resolvedCount={resolved.length}
@@ -42,7 +42,7 @@ const DataManagement = ({ fetchPromise }) => {
       <Container>
         <h1 className="my-5 font-bold pl-5 text-xl">Customer Tickets</h1>
         <div className="flex flex-col p-5 md:flex-row gap-5 pb-30">
-          {/*  Left - Tickets List */}
+          {/*  Left == Tickets List */}
           <div className="md:w-9/12  grid grid-cols-1 md:grid-cols-2 gap-5">
             {tickets.map((ticket) => (
               <div
@@ -54,7 +54,7 @@ const DataManagement = ({ fetchPromise }) => {
             ))}
           </div>
 
-          {/*  Right - Task Status & Resolved Task */}
+          {/*  Right == Task Status & Resolved Task */}
           <div className="md:w-3/12 ">
             <h2 className="font-bold text-xl mb-3">Task Status</h2>
 
@@ -79,9 +79,9 @@ const DataManagement = ({ fetchPromise }) => {
               </div>
             ))}
 
-            {/* Resolved Section */}
+            {/* Resolved--Section */}
             <h2 className="font-bold text-xl mt-5 mb-3">Resolved Task</h2>
-            
+
             {resolved.length === 0 && (
               <p className="font-semibold text-xl text-gray-500">
                 No resolved tasks yet.
@@ -101,4 +101,4 @@ const DataManagement = ({ fetchPromise }) => {
     </div>
   );
 };
-export default DataManagement;
+export default AlldataCollection;

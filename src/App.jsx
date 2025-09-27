@@ -3,7 +3,7 @@ import "./App.css";
 import Container from "./Components/Container";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import DataManagement from "./Components/DataManagement";
+import DataManagement from "./Components/AlldataCollection";
 import { ToastContainer } from "react-toastify";
 
 const fetchData = async () => {
@@ -19,7 +19,9 @@ function App() {
     <>
       <div>
         <Container></Container>
+
         <Navbar></Navbar>
+
         <Suspense
           fallback={
             <span className="loading loading-spinner text-success w-20 h-20"></span>
